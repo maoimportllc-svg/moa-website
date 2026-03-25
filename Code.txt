@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MOA Import & Export LLC</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body { margin:0; font-family:'Poppins', sans-serif; }
+
+header { background:#0a1f44; color:white; padding:15px 40px; }
+nav { display:flex; justify-content:space-between; align-items:center; }
+nav a { color:white; margin-left:20px; text-decoration:none; }
+
+.hero {
+  height:90vh;
+  background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  url('https://images.unsplash.com/photo-1606787366850-de6330128bfc');
+  background-size:cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+}
+
+section { padding:60px 40px; }
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.card {
+  background:#f4f4f4;
+  padding:20px;
+  border-radius:10px;
+}
+
+.contact {
+  background:#0a1f44;
+  color:white;
+  text-align:center;
+}
+
+input, textarea {
+  width:90%;
+  max-width:500px;
+  padding:10px;
+  margin:10px;
+}
+
+button {
+  padding:12px 25px;
+  background:orange;
+  border:none;
+  color:white;
+  cursor:pointer;
+}
+
+.whatsapp {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:green;
+  color:white;
+  padding:15px;
+  border-radius:50%;
+  text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<div style="display:flex;align-items:center;">
+<img src="logo.png" style="height:50px;margin-right:10px;">
+<h2>MOA Import & Export LLC</h2>
+</div>
+
+<div>
+<a href="#about">About</a>
+<a href="#products">Products</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+</header>
+
+<div class="hero">
+<div>
+<h1>Premium Agricultural Commodities</h1>
+<p>Global Supply of Natural Products</p>
+</div>
+</div>
+
+<section id="about">
+<h2>About Us</h2>
+<p>
+We export premium agricultural commodities including gum arabic, hibiscus,
+baobab, sesame, peanuts, legumes, spices, and herbs from Africa and global markets.
+</p>
+</section>
+
+<section id="products">
+<h2>Products</h2>
+<div class="grid">
+<div class="card">Gum Arabic</div>
+<div class="card">Hibiscus</div>
+<div class="card">Baobab</div>
+<div class="card">Sesame</div>
+<div class="card">Peanuts</div>
+<div class="card">Legumes</div>
+<div class="card">Spices</div>
+<div class="card">Herbs</div>
+</div>
+</section>
+
+<section>
+<h2>Why Choose Us</h2>
+<ul>
+<li>Trusted global suppliers</li>
+<li>High-quality products</li>
+<li>Reliable shipping</li>
+<li>Competitive pricing</li>
+</ul>
+</section>
+
+<section id="contact" class="contact">
+<h2>Request a Quote</h2>
+
+<p>Email: info@moaimportexport.com</p>
+<p>Phone: +1 720-908-4504</p>
+
+<input type="text" placeholder="Company Name"><br>
+<input type="text" placeholder="Your Name"><br>
+<input type="text" placeholder="Product Needed"><br>
+
+<button onclick="sendWhatsApp()">Send via WhatsApp</button>
+
+<script>
+function sendWhatsApp(){
+let msg = "Hello, I would like a quote.";
+window.open("https://wa.me/17209084504?text=" + encodeURIComponent(msg));
+}
+</script>
+
+</section>
+
+<a href="https://wa.me/17209084504" class="whatsapp">💬</a>
+
+</body>
+</html>
